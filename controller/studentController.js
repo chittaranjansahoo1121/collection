@@ -11,7 +11,8 @@ async function allDetails(req, res) {
     // })
 
     StudentModel.find().then((result) => {
-        res.send({result: result});
+        console.log(result)
+        res.json({result: result});
     }).catch((e) => {
         res.send(e);
     })

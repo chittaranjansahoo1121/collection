@@ -9,7 +9,7 @@ require("./src/db/data")
 const app=express();
 const router = require("./src/routes/studentRoutes")
 //port number
-app.listen(3000,console.log("app is running in port 3000"));
+app.listen(process.env.PORT || 3000,console.log("app is running in port 3000"));
 //middleware
 app.use(express.json());
 app.use(router);
